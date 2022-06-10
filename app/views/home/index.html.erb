@@ -4,7 +4,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-    <%= link_to 'Friend App', root_path, class: 'navbar-brand' %>
+    <%= link_to 'Elec Solutions', root_path, class: 'navbar-brand' %>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <%= link_to 'About us', home_about_path, class:'nav-link' %>
@@ -12,47 +12,36 @@
         <li class = 'signup'>
         <%= link_to 'sign up', home_signup_path, class: 'nav-link'%>
         </li>
- <li class = 'Show-friends'>
+    <li class = 'Show-friends'>
         <%= link_to ' Friends', friends_path, class: 'nav-link'%>
-        </li>
+      </li>
 
- <li class = 'add-friends'>
+
+
+  <% if user_signed_in? %>
+     <li class = 'add-friends'>
         <%= link_to 'Add Friends', new_friend_path, class: 'nav-link'%>
-        </li>
-      </ul>
+    </li>
+
+     <li class = 'add-friends'>
+        <%= button_to 'Sign Out',destroy_user_session_path, method: :delete, class: 'btn btn-secondary'%>
+    </li>
 
 
+    <li class = 'add-friend'>
+        <%= link_to 'Edit Profile',  edit_user_registration_path, class: 'btn btn-secondary'%>
+    </li>
+<% else %>
 
-<li class = 'add-friends'>
-        <%= link_to 'Add Friends', new_friend_path, class: 'nav-link'%>
-        </li>
-      </ul>
+    <li class = 'add-friends'>
+        <%= link_to 'Sign In ',new_user_session_path, class: 'nav-link'%>
+    </li>
 
-<li class = 'add-friends'>
-        <%= link_to 'Add Friends', new_friend_path, class: 'nav-link'%>
-        </li>
-      </ul>
-
-
-<li class = 'add-friends'>
-        <%= link_to 'Add Friends', new_friend_path, class: 'nav-link'%>
-        </li>
-      </ul>
-
-
-<li class = 'add-friends'>
-        <%= link_to 'Add Friends', new_friend_path, class: 'nav-link'%>
-        </li>
-      </ul>
-
-
-
-
-
-
-
-
-
+    <li class = 'add-friends'>
+        <%= link_to 'Sign Up', new_user_registration_path, class: 'nav-link'%>
+    </li>
+<% end %>
+  </ul>
 
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
