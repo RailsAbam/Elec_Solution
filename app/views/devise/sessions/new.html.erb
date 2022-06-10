@@ -1,5 +1,12 @@
 
-<h2>Log in</h2>
+
+<div class="card">
+  <div class="card-header">
+    <h2>Log in</h2>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"></h5>
+    <p class="card-text"></p>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field form-control-sm">
     <% f.label :email %><br />
@@ -26,5 +33,7 @@
 
 <%= render "devise/shared/links" %>
 
+  </div>
+</div>
 
 </div>

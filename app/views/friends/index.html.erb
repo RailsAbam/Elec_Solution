@@ -6,11 +6,11 @@
   <% @friends.each do |friend| %>
     <%= render friend %>
     <p>
-      <%= link_to "Show this friend", friend, class: 'btn btn-secondary' %>
+      <%= link_to "Show this friend", friend, class:"btn btn-outline-info " %>
     </p>
   <% end %>
 </table>
 
-<%= link_to "New friend", new_friend_path, class:'btn btn-secondary' %>
+<%= link_to "New friend", new_friend_path, class:"btn btn-outline-info "%>
 
 
