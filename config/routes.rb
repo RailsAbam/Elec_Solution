@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get  'home/signup'
   root 'home#index'
 
+
 end
 
 
