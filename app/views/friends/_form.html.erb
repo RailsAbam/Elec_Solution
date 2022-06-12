@@ -1,5 +1,8 @@
+
+<div class="card">
+    <div class="card-header">
 <%= form_with(model: friend) do |form| %>
-  <% if friend.errors.any? %>
+<% if friend.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(friend.errors.count, "error") %> prohibited this friend from being saved:</h2>
 
@@ -10,6 +13,11 @@
       </ul>
     </div>
   <% end %>
+    </div>
+    <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text"></p>
+
 <div class = 'container'>
   <div class = 'form-control-sm field form-group '>
     <% form.label :first_name, style: "display: block" %>
@@ -28,7 +36,7 @@
 
   <div class = 'form-control-sm' >
     <% form.label :phone, style: "display: block" %>
-    <%= form.text_field :phone, placeholder: 'Phone Number '  %>
+    <%= form.number_field :phone, placeholder: 'Phone Number',type: :number %>
   </div>
 
   <div class = 'form-control-sm  '>
@@ -50,9 +58,16 @@
     <% form.label :city, style: "display: block" %>
     <%= form.text_field :city, placeholder: 'City' %>
   </div>
+<% current_user %>
+<div class = 'form-control-sm'  >
+    <% form.label :city, style: "display: block" %>
+    <%= form.number_field :user_id, id: :friend_user_id, value: current_user.id, type: :hidden %>
 
   <div class = "btn btn-outline-info " >
     <%= form.submit %>
-  </div>
-  </div>
 <% end %>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
