@@ -1,0 +1,2 @@
+class ElecSolution < ApplicationRecord
+end
