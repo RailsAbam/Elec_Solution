@@ -93,6 +93,8 @@ GEM
       activesupport (>= 5.0)
     i18n (1.10.0)
       concurrent-ruby (~> 1.0)
+    image_helpers (0.1.0)
+      rails
     importmap-rails (1.1.0)
       actionpack (>= 6.0.0)
       railties (>= 6.0.0)
@@ -219,6 +221,7 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
+  image_helpers (~> 0.1.0)
   importmap-rails
   jbuilder
   puma (~> 5.0)
