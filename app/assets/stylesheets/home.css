@@ -1,0 +1,174 @@
+*,
+*::after,
+*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+
+html{
+    font-size: 40%;
+}
+
+body{
+
+        font-family: 'Tangerine', serif;
+         /*font-size: 48px; */
+        text-shadow: 3rem 3rem 3rem #aaa;
+        line-height: 1.7;
+        color:#777;
+        padding: 1rem;
+        box-sizing: border-box;
+
+}
+
+/*Header*/
+.header{
+ height: 100vh;
+ background-image:linear-gradient(
+    to right bottom,
+    rgba(126, 213,111, 0.8),
+     rgba(40, 180,131, 0.8)),
+    url("./photos/header.png");
+ background-size: cover;
+ background-position: top;
+ position: relative;
+ clip-path:polygon(0 0, 100% 0, 100% 85%, 0 100% ) ;
+}
+
+/*Log*/
+.log-box{
+position: absolute;
+top:1rem;
+left:1.5rem;
+
+
+}
+
+.log{
+    height: 4rem;
+    border-radius: 25rem ;
+
+}
+
+
+.text-box {
+    position:absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+
+
+/*Heading for Elec*/
+.heading-primary{
+    color:#fff;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom:  6rem;
+}
+
+
+/*main header*/
+.heading-primary-main{
+    display: block;
+    font-size: 3.5rem;
+    font-weight: 200;
+    letter-spacing: 3rem;
+    animation-name: moveInLeft;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+
+}
+
+/*The second header*/
+.heading-primary-sub{
+display: block;
+font-size: 1.5rem;
+font-weight:4rem ;
+letter-spacing: 1.5rem;
+
+}
+
+
+@keyframes moveInLeft {
+0%{
+    opacity: 0;
+    transform: translateX(-10rem);
+}
+
+60%{
+    transform: rotate(180deg);
+}
+
+80%{
+transform: translateX(8%);
+
+}
+
+100%{
+    opacity: 1;
+    transform: translate(0);
+    }
+}
+
+
+.btn:link,
+.btn:visited{
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 2rem 4rem;
+    display: inline-block;
+    border-radius: 2rem;
+    transition: all.2s;
+    position: relative;
+    font-size: 1.5rem;
+}
+
+.btn:hover{
+    transform: translateY(-1rem);
+    box-shadow: 0 1.5rem 1.5rem rgb(255, 192, 203);
+}
+
+.btn:active{
+    transform: translateY(-1rem);
+}
+
+.btn-white{
+    background-color: #fff;
+    color:rgb(119, 119, 119);
+
+}
+
+
+.btn::after{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width:100%;
+    border-radius: 10rem;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+
+.btn-white::after{
+    background-color: rgba(255, 255, 255, 0.738);
+}
+
+.btn:hover::after{
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+
+.btn-animated{
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards;
+}
